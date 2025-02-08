@@ -16,7 +16,7 @@ const navigation = {
   support: [
     { name: "FAQs", href: "/faq" },
     { name: "Support", href: "/contact" },
-    { name: "Service Areas", href: "/service-areas" },
+    { name: "Service Areas", href: "/service-area" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },

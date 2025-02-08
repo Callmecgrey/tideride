@@ -62,7 +62,7 @@ export default function ServiceAreas() {
   return (
     <main className="flex-1">
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden <boltAction type="file" filePath="app/service-areas/page.tsx" continued>      <section className="relative pt-20 overflow-hidden">
+      <section className="relative pt-20 overflow-hidden">
         <div className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl">
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/20 to-primary/10 opacity-30"></div>
         </div>
