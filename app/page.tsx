@@ -1,0 +1,190 @@
+import { Button } from "@/components/ui/button";
+import { Truck, Clock, Sparkles, ArrowRight, MapPin, Shield, Users } from "lucide-react";
+import Link from "next/link";
+
+const locations = [
+  "New York",
+  "Los Angeles",
+  "Chicago",
+  "Toronto",
+  "Vancouver",
+  "Montreal",
+  "Miami",
+  "Seattle"
+];
+
+export default function Home() {
+  return (
+    <main className="flex-1">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-24 pb-32">
+        <div className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/20 to-primary/10 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+        </div>
+        
+        <div className="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-16 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
+            <div className="flex">
+              <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-border hover:ring-ring">
+                <span className="font-semibold text-primary">Now Available</span>
+                <div className="h-4 w-px bg-border"></div>
+                <span>Serving major cities across the US & Canada</span>
+              </div>
+            </div>
+            <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight sm:text-6xl">
+              Your laundry,
+              <span className="block text-primary">delivered fresh</span>
+            </h1>
+            <p className="mt-8 text-lg leading-8 text-muted-foreground">
+              Experience North America's premier laundry service. Professional washing, folding, and delivery right to your doorstep, available in major cities across the United States and Canada.
+            </p>
+            <div className="mt-10 flex items-center gap-x-6">
+              <Link href="/schedule">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  Schedule Pickup
+                </Button>
+              </Link>
+              <Link 
+                href="/how-it-works" 
+                className="group flex items-center gap-x-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              >
+                Learn more 
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+          <div className="mt-16 lg:mt-0 lg:flex-shrink-0">
+            <div className="relative">
+              <img
+                className="relative mx-auto w-[32rem] max-w-full rounded-xl shadow-2xl ring-1 ring-border"
+                src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=2071&auto=format&fit=crop"
+                alt="Clean folded laundry"
+              />
+              <div className="absolute -bottom-8 -left-8 rounded-2xl bg-background/90 p-6 shadow-lg backdrop-blur-sm ring-1 ring-border">
+                <div className="flex items-center gap-x-4">
+                  <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary">
+                    <Clock className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold">24-Hour Turnaround</p>
+                    <p className="text-sm text-muted-foreground">Quick & reliable service</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="relative isolate py-32 bg-muted/50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-primary">Premium Service</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+              Everything you need for pristine laundry
+            </p>
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+              Experience the convenience of professional laundry service, tailored to your schedule.
+            </p>
+          </div>
+          
+          <div className="mx-auto mt-16 max-w-2xl lg:mt-24 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                    <Truck className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Free Pickup & Delivery
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
+                  <p className="flex-auto">We come to you. Schedule a pickup and we'll handle the rest, with real-time tracking available.</p>
+                </dd>
+              </div>
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                    <Shield className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Premium Quality
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
+                  <p className="flex-auto">Professional cleaning with eco-friendly products and meticulous attention to detail.</p>
+                </dd>
+              </div>
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                    <Users className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Trusted Service
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
+                  <p className="flex-auto">Join thousands of satisfied customers across North America who trust us with their laundry.</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Locations Grid */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Available in Major Cities</h2>
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+              Serving communities across the United States and Canada with plans for continued expansion.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 max-w-2xl lg:mt-20 lg:max-w-none">
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+              {locations.map((location) => (
+                <div
+                  key={location}
+                  className="relative flex items-center space-x-3 rounded-lg border bg-background px-6 py-5 shadow-sm hover:border-primary/50 transition-colors"
+                >
+                  <div className="flex-shrink-0">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <span className="absolute inset-0" aria-hidden="true" />
+                    <p className="text-sm font-medium">{location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-32">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5"></div>
+          <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-background shadow-xl shadow-primary/10 ring-1 ring-primary/5"></div>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Ready for fresh, clean laundry?
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+              Join thousands of satisfied customers across North America. Experience the convenience of TidyRide today.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link href="/schedule">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  Schedule Your First Pickup
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
