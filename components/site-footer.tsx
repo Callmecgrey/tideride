@@ -1,8 +1,7 @@
 "use client";
 
-import { Shirt, Mail, MapPin, Phone } from "lucide-react";
+import { Phone, Mail, Shirt } from "lucide-react";
 import Link from "next/link";
-import { ThemeToggle } from "./theme-toggle";
 
 const navigation = {
   company: [
@@ -17,7 +16,7 @@ const navigation = {
   support: [
     { name: "FAQs", href: "/faq" },
     { name: "Support", href: "/contact" },
-    { name: "Service Areas", href: "/service-area" },
+    { name: "Service Areas", href: "/service-areas" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -66,7 +65,6 @@ const navigation = {
 export function SiteFooter() {
   return (
     <footer className="bg-muted/50">
-
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -97,7 +95,7 @@ export function SiteFooter() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div>
+              <div>
                 <h3 className="text-sm font-semibold leading-6">Company</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
@@ -129,7 +127,7 @@ export function SiteFooter() {
               </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div>
+              <div>
                 <h3 className="text-sm font-semibold leading-6">Solutions</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (

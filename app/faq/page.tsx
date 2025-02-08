@@ -78,13 +78,13 @@ export default function FAQ() {
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/20 to-primary/10 opacity-30"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight lg:text-6xl">
               Frequently Asked
               <span className="block text-primary">Questions</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 text-base sm:text-lg leading-8 text-muted-foreground">
               Find answers to common questions about our services, coverage areas, and more.
             </p>
           </div>
@@ -92,8 +92,8 @@ export default function FAQ() {
       </section>
 
       {/* Search Section */}
-      <section className="py-12 bg-muted/50">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+      <section className="py-8 sm:py-12 bg-muted/50">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
             <Input
@@ -108,19 +108,19 @@ export default function FAQ() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-24">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <div className="space-y-24">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-16 sm:space-y-24">
             {filteredFAQs.map((category) => (
               <div key={category.category}>
-                <h2 className="text-2xl font-bold tracking-tight">{category.category}</h2>
-                <dl className="mt-8 space-y-8">
+                <h2 className="text-xl sm:text-2xl font-bold tracking-tight">{category.category}</h2>
+                <dl className="mt-6 sm:mt-8 space-y-6 sm:space-y-8">
                   {category.questions.map((faq, index) => (
                     <div key={index} className="group">
-                      <dt className="text-lg font-semibold leading-7 group-hover:text-primary transition-colors">
+                      <dt className="text-base sm:text-lg font-semibold leading-7 group-hover:text-primary transition-colors">
                         {faq.question}
                       </dt>
-                      <dd className="mt-4 text-base leading-7 text-muted-foreground">
+                      <dd className="mt-3 sm:mt-4 text-sm sm:text-base leading-7 text-muted-foreground">
                         {faq.answer}
                       </dd>
                     </div>

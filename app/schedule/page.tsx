@@ -27,13 +27,13 @@ export default function Schedule() {
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/20 to-primary/10 opacity-30"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight lg:text-6xl">
               Get Started with
               <span className="block text-primary">TidyRide</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 text-base sm:text-lg leading-8 text-muted-foreground">
               Download our mobile app to schedule pickups, track orders, and manage your laundry service. Not available in your area yet? Join our waitlist to be notified when we launch!
             </p>
           </div>
@@ -41,22 +41,22 @@ export default function Schedule() {
       </section>
 
       {/* App Download Section */}
-      <section className="py-24 bg-muted/50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-16 sm:py-24 bg-muted/50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-6 sm:gap-8">
               <div className="rounded-2xl bg-primary p-3">
                 <Smartphone className="h-8 w-8 text-primary-foreground" />
               </div>
-              <h2 className="text-3xl font-bold tracking-tight">Download Our App</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Download Our App</h2>
+              <p className="text-base sm:text-lg text-muted-foreground text-center">
                 Get the full TidyRide experience with our mobile app
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="bg-background hover:bg-accent border-border/50 hover:border-border"
+                  className="w-full sm:w-auto bg-background hover:bg-accent border-border/50 hover:border-border"
                 >
                   <Apple className="mr-2 h-5 w-5" />
                   Download for iOS
@@ -64,7 +64,7 @@ export default function Schedule() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="bg-background hover:bg-accent border-border/50 hover:border-border"
+                  className="w-full sm:w-auto bg-background hover:bg-accent border-border/50 hover:border-border"
                 >
                   <svg viewBox="0 0 24 24" className="mr-2 h-5 w-5" fill="currentColor">
                     <path d="M17.523 15.341l2.194 2.194c.208.208.208.544 0 .751l-1.409 1.409c-.208.208-.544.208-.751 0l-2.194-2.194-2.194 2.194c-.208.208-.544.208-.751 0l-1.409-1.409c-.208-.208-.208-.544 0-.751l2.194-2.194-2.194-2.194c-.208-.208-.208-.544 0-.751l1.409-1.409c.208-.208.544-.208.751 0l2.194 2.194 2.194-2.194c.208-.208.544-.208.751 0l1.409 1.409c.208.208.208.544 0 .751l-2.194 2.194z"/>
@@ -79,20 +79,20 @@ export default function Schedule() {
       </section>
 
       {/* Waitlist Section */}
-      <section className="relative py-24">
+      <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5"></div>
           <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-background shadow-xl shadow-primary/10 ring-1 ring-primary/5"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-6 sm:gap-8">
               <div className="rounded-2xl bg-primary p-3">
                 <Mail className="h-8 w-8 text-primary-foreground" />
               </div>
-              <h2 className="text-3xl font-bold tracking-tight">Join the Waitlist</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Join the Waitlist</h2>
+              <p className="text-base sm:text-lg text-muted-foreground text-center">
                 Be the first to know when TidyRide launches in your area
               </p>
               <form onSubmit={handleSubmit} className="w-full max-w-md">
@@ -105,7 +105,7 @@ export default function Schedule() {
                     required
                     className="flex-1"
                   />
-                  <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button type="submit" size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
                     Join Waitlist
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

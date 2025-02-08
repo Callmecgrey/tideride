@@ -62,17 +62,17 @@ export default function ServiceAreas() {
   return (
     <main className="flex-1">
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
+      <section className="relative pt-20 overflow-hidden <boltAction type="file" filePath="app/service-areas/page.tsx" continued>      <section className="relative pt-20 overflow-hidden">
         <div className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl">
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/20 to-primary/10 opacity-30"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight lg:text-6xl">
               Service Areas
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 text-base sm:text-lg leading-8 text-muted-foreground">
               Find out if TidyRide is available in your area by searching your city, ZIP code, or postal code.
             </p>
           </div>
@@ -80,9 +80,9 @@ export default function ServiceAreas() {
       </section>
 
       {/* Search Section */}
-      <section className="py-12 bg-muted/50">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <div className="flex gap-4">
+      <section className="py-8 sm:py-12 bg-muted/50">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
               <Input
@@ -96,7 +96,7 @@ export default function ServiceAreas() {
             </div>
             <Button 
               onClick={handleSearch}
-              className="bg-primary hover:bg-primary/90"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90"
             >
               Search
             </Button>
@@ -105,24 +105,24 @@ export default function ServiceAreas() {
       </section>
 
       {/* Results Section */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {hasSearched && searchResults.length === 0 ? (
             <div className="text-center">
-              <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
-              <h3 className="mt-4 text-lg font-semibold">No Service Available Yet</h3>
-              <p className="mt-2 text-muted-foreground">
+              <MapPin className="mx-auto h-10 sm:h-12 w-10 sm:w-12 text-muted-foreground" />
+              <h3 className="mt-4 text-base sm:text-lg font-semibold">No Service Available Yet</h3>
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground">
                 We haven't reached your area yet, but we're expanding quickly! Join our waitlist to be notified when we launch.
               </p>
               <Button
-                className="mt-6 bg-primary hover:bg-primary/90"
+                className="mt-6 w-full sm:w-auto bg-primary hover:bg-primary/90"
                 onClick={() => window.location.href = '/schedule'}
               >
                 Join Waitlist
               </Button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
               {(hasSearched ? searchResults : serviceAreas).map((area) => (
                 <div
                   key={area.city}
@@ -131,13 +131,13 @@ export default function ServiceAreas() {
                   <img
                     src={area.image}
                     alt={area.city}
-                    className="h-64 w-full object-cover"
+                    className="h-48 sm:h-64 w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-6 sm:p-8">
                     <div className="text-white">
-                      <h3 className="text-2xl font-bold">{area.city}</h3>
-                      <p className="mt-2">{area.state}, {area.country}</p>
-                      <p className="mt-2 text-sm text-gray-300">
+                      <h3 className="text-xl sm:text-2xl font-bold">{area.city}</h3>
+                      <p className="mt-2 text-sm sm:text-base">{area.state}, {area.country}</p>
+                      <p className="mt-2 text-xs sm:text-sm text-gray-300">
                         {area.zipCodes ? 'ZIP Codes' : 'Postal Codes'}: {(area.zipCodes || area.postalCodes)?.slice(0, 3).join(", ")} and more...
                       </p>
                     </div>

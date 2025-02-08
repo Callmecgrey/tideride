@@ -43,7 +43,7 @@ const services = [
       "Professional pressing",
       "Protective garment bags"
     ],
-    image: "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1553915632-175f60dd8e36?q=80&w=2070&auto=format&fit=crop"
   },
   {
     name: "Commercial Services",
@@ -70,13 +70,13 @@ export default function Services() {
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/20 to-primary/10 opacity-30"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight lg:text-6xl">
               Professional Laundry
               <span className="block text-primary">Services</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 text-base sm:text-lg leading-8 text-muted-foreground">
               From everyday laundry to premium garment care, we offer comprehensive solutions tailored to your needs.
             </p>
           </div>
@@ -84,47 +84,47 @@ export default function Services() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-muted/50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="space-y-24">
+      <section className="py-16 sm:py-24 bg-muted/50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-16 sm:space-y-24">
             {services.map((service, index) => (
               <div
                 key={service.name}
-                className={`flex flex-col gap-16 lg:flex-row ${
+                className={`flex flex-col gap-8 sm:gap-16 lg:flex-row ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
                 <div className="lg:w-1/2">
-                  <div className="relative h-[400px] overflow-hidden rounded-2xl">
+                  <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-2xl">
                     <img
                       src={service.image}
                       alt={service.name}
                       className="absolute inset-0 h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-8">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-6 sm:p-8">
                       <div className="w-full">
                         <div className="flex items-center gap-x-3">
                           <div className="rounded-lg bg-primary/90 backdrop-blur-sm p-2">
-                            <service.icon className="h-6 w-6 text-primary-foreground" />
+                            <service.icon className="h-5 sm:h-6 w-5 sm:w-6 text-primary-foreground" />
                           </div>
-                          <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                          <h3 className="text-xl sm:text-2xl font-bold text-white">{service.name}</h3>
                         </div>
-                        <p className="mt-2 text-gray-200">{service.description}</p>
+                        <p className="mt-2 text-sm sm:text-base text-gray-200">{service.description}</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="lg:w-1/2 flex items-center">
                   <div className="space-y-6">
-                    <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight lg:text-3xl">
                       {service.name}
                     </h3>
-                    <p className="text-lg text-muted-foreground">{service.description}</p>
-                    <ul className="space-y-4">
+                    <p className="text-base sm:text-lg text-muted-foreground">{service.description}</p>
+                    <ul className="space-y-3 sm:space-y-4">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-x-3">
-                          <Check className="h-5 w-5 text-primary" />
-                          <span className="text-muted-foreground">{feature}</span>
+                          <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm sm:text-base text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -137,7 +137,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-primary">
+      <section className="relative py-16 sm:py-24 bg-primary">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?q=80&w=2070&auto=format&fit=crop"
@@ -145,17 +145,17 @@ export default function Services() {
             className="w-full h-full object-cover opacity-10"
           />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary-foreground lg:text-4xl">
               Ready to experience our service?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-primary-foreground/80">
+            <p className="mt-6 text-base sm:text-lg leading-8 text-primary-foreground/80">
               Schedule your first pickup and discover the convenience of professional laundry care.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 sm:mt-10 flex items-center justify-center gap-x-6">
               <Link href="/schedule">
-                <Button size="lg" variant="secondary">
+                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                   Schedule Pickup
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
