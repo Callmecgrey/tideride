@@ -20,7 +20,7 @@ export default function HowItWorks() {
             <p className="mt-6 text-base sm:text-lg leading-8 text-muted-foreground">
               Experience the convenience of our premium laundry service in four easy steps. From pickup to delivery, we handle everything with care and precision.
             </p>
-            <div className="mt-8 sm:mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 sm:mt-10 flex items-center justify-center">
               <Link href="/schedule">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
                   Get Started Now
@@ -34,24 +34,24 @@ export default function HowItWorks() {
       {/* Process Steps */}
       <section className="py-16 sm:py-24 bg-muted/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 sm:gap-y-20 lg:grid-cols-2 lg:gap-x-16">
+          <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
             {/* Step 1 */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-border">
                 <img
                   src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2070&auto=format&fit=crop"
                   alt="Schedule pickup"
-                  className="w-full h-[300px] sm:h-[400px] object-cover"
+                  className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-6 sm:p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-4 sm:p-6 lg:p-8">
                   <div className="text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold">1. Schedule Pickup</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">1. Schedule Pickup</h3>
                     <p className="mt-2 text-sm sm:text-base text-gray-200">Book your preferred time slot online</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-6 sm:-bottom-10 -right-6 sm:-right-10 bg-background rounded-2xl p-4 sm:p-6 shadow-xl ring-1 ring-border">
-                <PackageCheck className="h-8 sm:h-12 w-8 sm:w-12 text-primary" />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-background rounded-2xl p-3 sm:p-4 lg:p-6 shadow-xl ring-1 ring-border">
+                <PackageCheck className="h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12 text-primary" />
               </div>
             </div>
 
@@ -61,17 +61,17 @@ export default function HowItWorks() {
                 <img
                   src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=2071&auto=format&fit=crop"
                   alt="Professional cleaning"
-                  className="w-full h-[300px] sm:h-[400px] object-cover"
+                  className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-6 sm:p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-4 sm:p-6 lg:p-8">
                   <div className="text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold">2. We Clean</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">2. We Clean</h3>
                     <p className="mt-2 text-sm sm:text-base text-gray-200">Expert cleaning with premium products</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-6 sm:-bottom-10 -right-6 sm:-right-10 bg-background rounded-2xl p-4 sm:p-6 shadow-xl ring-1 ring-border">
-                <Sparkles className="h-8 sm:h-12 w-8 sm:w-12 text-primary" />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-background rounded-2xl p-3 sm:p-4 lg:p-6 shadow-xl ring-1 ring-border">
+                <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12 text-primary" />
               </div>
             </div>
 
@@ -81,17 +81,17 @@ export default function HowItWorks() {
                 <img
                   src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?q=80&w=2070&auto=format&fit=crop"
                   alt="Quality check"
-                  className="w-full h-[300px] sm:h-[400px] object-cover"
+                  className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-6 sm:p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-4 sm:p-6 lg:p-8">
                   <div className="text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold">3. Quality Check</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">3. Quality Check</h3>
                     <p className="mt-2 text-sm sm:text-base text-gray-200">Thorough inspection and perfect folding</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-6 sm:-bottom-10 -right-6 sm:-right-10 bg-background rounded-2xl p-4 sm:p-6 shadow-xl ring-1 ring-border">
-                <Timer className="h-8 sm:h-12 w-8 sm:w-12 text-primary" />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-background rounded-2xl p-3 sm:p-4 lg:p-6 shadow-xl ring-1 ring-border">
+                <Timer className="h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12 text-primary" />
               </div>
             </div>
 
@@ -101,17 +101,17 @@ export default function HowItWorks() {
                 <img
                   src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit=crop"
                   alt="Delivery"
-                  className="w-full h-[300px] sm:h-[400px] object-cover"
+                  className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-6 sm:p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 flex items-end p-4 sm:p-6 lg:p-8">
                   <div className="text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold">4. Fast Delivery</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">4. Fast Delivery</h3>
                     <p className="mt-2 text-sm sm:text-base text-gray-200">Right to your doorstep within 24 hours</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-6 sm:-bottom-10 -right-6 sm:-right-10 bg-background rounded-2xl p-4 sm:p-6 shadow-xl ring-1 ring-border">
-                <Truck className="h-8 sm:h-12 w-8 sm:w-12 text-primary" />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-background rounded-2xl p-3 sm:p-4 lg:p-6 shadow-xl ring-1 ring-border">
+                <Truck className="h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12 text-primary" />
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function HowItWorks() {
             <p className="mt-6 text-base sm:text-lg leading-8 text-muted-foreground">
               Join thousands of satisfied customers who have made laundry day stress-free with TidyRide.
             </p>
-            <div className="mt-8 sm:mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 sm:mt-10 flex items-center justify-center">
               <Link href="/schedule">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
                   Schedule Your First Pickup
